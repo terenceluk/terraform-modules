@@ -11,9 +11,9 @@ resource "azurerm_container_registry" "acr" {
     resource_group_name = var.resource_group_name
     location            = var.resource_group_location
 
-    sku                 = "Basic"
+    sku                 = var.acr_sku
 
-    admin_enabled       = true
+    admin_enabled       = var.acr_admin_enabled
 }
 
 resource "azurerm_management_lock" "acr_lock" {

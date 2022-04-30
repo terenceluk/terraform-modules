@@ -12,3 +12,10 @@ resource "azurerm_container_registry" "acr" {
 
     admin_enabled       = true
 }
+
+resource "azurerm_management_lock" "acr" {
+  name       = var.acr_lock_name
+  scope      = azurerm_container_registry.acr.id
+  lock_level = var.acr_lock_level
+  notes      = var.acr_lock_name
+}

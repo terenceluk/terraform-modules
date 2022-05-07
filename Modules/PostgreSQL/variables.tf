@@ -2,13 +2,6 @@
 This file contains all the variables defined for the terraform code
 */
 
-# Terraform resource for generating random strings used for default values
-resource "random_string" "random_suffix" {
-  length  = 3
-  special = false
-  upper   = false
-}
-
 # Variables for Azure Database for PostgreSQL servers
 variable "sql_name" {
   type        = string

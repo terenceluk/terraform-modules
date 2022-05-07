@@ -6,7 +6,7 @@ This file contains all the variables defined for the terraform code
 variable "cluster_name" {
   type        = string
   description = "Configure the name of the Managed Kubernetes Cluster to create"
-  default     = "Azure-K8s-aks-${random_string.random_suffix.result}-cr" # uses random 3 character string
+  default     = ""
 }
 
 variable "resource_group_name" {

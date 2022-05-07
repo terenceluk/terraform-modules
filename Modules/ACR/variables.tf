@@ -6,7 +6,7 @@ This file contains all the variables defined for the terraform code
 variable "acr_name" {
   type        = string
   description = "Specify the name of the Container Registry"
-  default     = "Azure-Container-Reg-${random_string.random_suffix.result}-cr" # uses random 3 character string
+  default     = ""
 }
 
 variable "acr_sku" {

@@ -6,7 +6,7 @@ This file contains all the variables defined for the terraform code
 variable "sql_name" {
   type        = string
   description = "PostgreSQL Server Name"
-  default     = "postgreSQL-svr-${random_string.random_suffix.result}" # uses random 3 character string
+  default     = ""
 }
 
 variable "sku_name" {

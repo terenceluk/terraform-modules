@@ -23,7 +23,7 @@ variable "tags" {
   #    "Owner"       = "<name>"
   #  }
 }
-
+/*
 variable "vnet_name" {
   type        = string
   description = "VNet name"
@@ -51,5 +51,6 @@ variable "subnets" {
       name             = "snet-us-eus-dr-172.16.37.0-24"
       address_prefixes = ["172.16.37.0/24"]
     }
-  } */
+  }
 }
+*/

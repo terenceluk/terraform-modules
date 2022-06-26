@@ -6,7 +6,7 @@ Reference: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 resource "azurerm_resource_group" "vnet_rg" {
   name     = var.resource_group_name
   location = var.resource_group_location
-  tags     = var.tags
+#  tags     = var.tags
 }
 /*
 resource "azurerm_virtual_network" "vnet" {

@@ -4,7 +4,7 @@ Reference: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
            https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet
 */
 resource "azurerm_resource_group" "vnet_rg" {
-  name     = var.resourcegroup_name
+  name     = var.resource_group_name
   location = var.location
   tags     = var.tags
 }
@@ -19,7 +19,7 @@ resource "azurerm_virtual_network" "vnet" {
 
 resource "azurerm_subnet" "subnet" {
   for_each             = var.subnets
-  resource_group_name  = var.resourcegroup_name
+  resource_group_name  = azurerm_resource_group.vnet_rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   name                 = each.value["name"]
   address_prefixes     = each.value["address_prefixes"]

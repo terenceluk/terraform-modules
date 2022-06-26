@@ -3,7 +3,7 @@ This file contains all the variables defined for the terraform code
 */
 
 # Variables for VNet and Subnets
-variable "resourcegroup_name" {
+variable "resource_group_name" {
   type        = string
   description = "Resource group name"
   #  default     = "rg-<resouce group name>"
